@@ -13,7 +13,7 @@ function Hero() {
             <img src={Star} alt="Image of a star" className={'star two'}/>
             <img src={Star} alt="Image of a star" className={'star three'}/>
             <div className="hero__text">
-                <h2>Igniting a Revolution in HR Innovation<img src={PinkLine} alt="Pink Line"/></h2>
+                <h2>Igniting a Revolution in HR Innovation<img src={PinkLine} alt="Pink Line" className={"pinkLine"}/></h2>
 
             </div>
             <div className="hero__details">
