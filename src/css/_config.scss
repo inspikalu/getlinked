@@ -1,0 +1,53 @@
+$primary-color: #D434FE;
+$secondary-color: #903aff;
+$tertiary-color: #150e28;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Clash Display", sans-serif;
+}
+
+.text--primary {
+  color: $primary-color !important;
+}
+
+.text--primary--dark {
+  color: darken($primary-color, 14%);
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: ClashDisplay-Variable, sans-serif;
+}
+
+.button-gradient {
+  background: linear-gradient(to right, #943AFF, #D434FE, #FF26B9, #FE34B9);
+}
+
+@mixin transition-ease {
+  transition: all .7s ease-in-out;
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1000px) {
+    @content
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 700px) {
+    @content
+  }
+}
+
+@mixin media-sm {
+  @media screen and (min-width: 400px) {
+    @content
+  }
+}

@@ -1,0 +1,137 @@
+.hero {
+  border-bottom: .8px solid rgba(#d9d9d9, .9);
+  display: grid;
+  grid-template-areas:
+"heroText   "
+"heroDetails"
+"heroImage  ";
+  gap: 1.2rem;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
+  background-image: url("/src/images/Purple-Lens-Flare-PNG MObile.png");
+  background-repeat: no-repeat;
+  background-position: -36px 0;
+  background-blend-mode: difference;
+  background-size: 40rem;
+  position: relative;
+
+  .star {
+    position: absolute;
+    top: 3rem;
+    left: 6rem;
+  }
+
+  .star.two {
+    top: 8rem;
+    opacity: 60%;
+    left: 90%;
+    width: 15px;
+  }
+
+  .star.three {
+    top: 18rem;
+    left: 27rem;
+    opacity: 60%;
+    width: 10px;
+  }
+
+  &__text {
+    grid-area: heroText;
+
+    h2 {
+      position: relative;
+      text-align: right;
+      font-style: italic;
+      font-size: 1rem;
+      font-weight: 500;
+
+      img {
+        position: absolute;
+        bottom: -12px;
+        right: 0;
+      }
+    }
+  }
+
+  &__details {
+    grid-area: heroDetails;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    margin-top: 2rem;
+    gap: .5rem;
+
+
+    h2 {
+      width: 12ch;
+      text-align: center;
+      font-size: 2rem;
+      position: relative;
+
+      span {
+        color: $primary-color !important;
+        font-weight: 700;
+      }
+
+      .bulb {
+        position: absolute;
+        width: 18px;
+        height: 26px;
+        top: -1.2rem;
+        right: 2rem;
+      }
+    }
+
+    p {
+      text-align: center;
+      width: 40ch;
+      font-size: 1rem;
+      margin-block: 1rem;
+    }
+
+    button {
+      border: none;
+      padding: 15px 15px;
+      font: inherit;
+      color: white;
+      width: 45%;
+      border-radius: 4px;
+    }
+
+    .time {
+      font-size: .6rem;
+
+      span {
+        font-size: 2rem;
+        line-height: 1;
+        font-family: 'Unica One', cursive;
+      }
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+  }
+
+  &__image {
+    grid-area: heroImage;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    .virtualScreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 82.4%;
+    }
+  }
+
+}

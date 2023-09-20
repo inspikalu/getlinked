@@ -1,0 +1,105 @@
+@import "config";
+@import "hero";
+@import "intro";
+@import "rules";
+@import "judging";
+@import "faq";
+
+
+body {
+  font-family: ClashDisplay, sans-serif !important;
+  background-color: $tertiary-color;
+  color: white;
+}
+
+@keyframes flip-down {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+  padding-block: 1.5rem;
+  width: 100%;
+  position: relative;
+  border-bottom: .8px solid rgba(#d9d9d9, .9);
+
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__links {
+    display: none;
+    position: absolute;
+    top: 0;
+    list-style-type: none;
+
+    .closeBtn {
+      display: none;
+    }
+
+    @include transition-ease;
+
+  }
+
+  &__links.open {
+    background-color: $tertiary-color;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    gap: 10px;
+    font-size: 1.3rem;
+    animation: flip-down .5s;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-inline: clamp(3rem, 200px, 4rem);
+    height: 100vh;
+    z-index: 2;
+
+    .closeBtn {
+      display: block;
+      cursor: pointer;
+      place-self: flex-end;
+    }
+
+    li {
+      button {
+        border: 1px solid transparent;
+        font: inherit;
+        padding: 10px 15px;
+        color: white;
+        width: 200%;
+        //background-image: linear-gradient(to right, $primary-color, $secondary-color);
+        @extend .button-gradient;
+
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .sidebar-activator {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+}
+
+#detail {
+  height: 200vh;
+}
+
+
+@import "responsive";
