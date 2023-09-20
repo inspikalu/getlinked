@@ -27,119 +27,93 @@ html {
 }
 
 .hero {
-  border-bottom: 0.8px solid rgba(217, 217, 217, 0.9);
+  min-height: 50vh;
   display: grid;
-  grid-template-areas: "heroText   " "heroDetails" "heroImage  ";
-  gap: 1.2rem;
+  grid-template-areas: "title" "details" "image";
+  grid-template-columns: repeat(1, 1fr);
+  place-content: center;
+  gap: 1.6rem;
+  padding-inline: 1rem;
+  padding-block-start: 1rem;
+  border-bottom: 0.8px solid rgba(217, 217, 217, 0.9);
+}
+.hero > section {
   width: 100%;
-  padding: 2rem 2rem 0 2rem;
-  background-image: url("/src/images/Purple-Lens-Flare-PNG MObile.png");
-  background-repeat: no-repeat;
-  background-position: -36px 0;
-  background-blend-mode: difference;
-  background-size: 40rem;
-  position: relative;
+  text-align: center;
 }
-.hero .star {
-  position: absolute;
-  top: 3rem;
-  left: 6rem;
+.hero__Title {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hero .star.two {
-  top: 8rem;
-  opacity: 60%;
-  left: 90%;
-  width: 15px;
-}
-.hero .star.three {
-  top: 18rem;
-  left: 27rem;
-  opacity: 60%;
-  width: 10px;
-}
-.hero__text {
-  grid-area: heroText;
-}
-.hero__text h2 {
-  position: relative;
-  text-align: right;
+.hero__Title h2 {
+  font-size: 1.5rem;
   font-style: italic;
-  font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
-.hero__text h2 img {
-  position: absolute;
-  bottom: -13px;
-  right: 0;
+.hero__Title .pinkLine {
   width: 115px;
+  height: 7px;
+  align-self: flex-end;
+  -webkit-transform: translateX(-17px);
+  -moz-transform: translateX(-17px);
+  -ms-transform: translateX(-17px);
+  -o-transform: translateX(-17px);
+  transform: translateX(-17px);
 }
-.hero__details {
-  grid-area: heroDetails;
+.hero__Details {
+  grid-area: details;
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1;
-  margin-top: 2rem;
-  gap: 0.5rem;
+  justify-content: center;
 }
-.hero__details h2 {
-  width: 12ch;
-  text-align: center;
-  font-size: 2rem;
-  position: relative;
+.hero__Details h2 {
+  width: 15ch;
+  word-spacing: 3px;
+  letter-spacing: 2px;
 }
-.hero__details h2 span {
-  color: #D434FE !important;
-  font-weight: 700;
-}
-.hero__details h2 .bulb {
-  position: absolute;
-  width: 18px;
-  height: 26px;
-  top: -1.2rem;
-  right: 2rem;
-}
-.hero__details p {
-  text-align: center;
-  width: 40ch;
-  font-size: 1rem;
-  margin-block: 1rem;
-}
-.hero__details button {
-  border: none;
-  padding: 15px 15px;
-  font: inherit;
-  color: white;
-  width: 45%;
-  border-radius: 4px;
-}
-.hero__details .time {
-  font-size: 0.6rem;
-}
-.hero__details .time span {
-  font-size: 2rem;
-  line-height: 1;
-  font-family: "Unica One", cursive;
-}
-.hero__details img {
-  width: 32px;
-  height: 32px;
+.hero__Details h2 span > img {
   vertical-align: middle;
 }
+.hero__Details h2 span > img.chain {
+  width: 32.8px;
+  height: 32.8px;
+}
+.hero__Details h2 span > img.explosion {
+  width: 22.12px;
+  height: 22.12px;
+}
+.hero__Details p {
+  width: 37ch;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  margin-block: 0.7rem;
+}
+.hero__Details button {
+  padding: 10px 15px;
+  border: none;
+  font: inherit;
+  color: white;
+  min-width: 152px;
+  border-radius: 4px;
+}
 .hero__image {
-  grid-area: heroImage;
+  grid-area: image;
   position: relative;
   overflow: hidden;
+  opacity: 80%;
 }
 .hero__image img {
   width: 100%;
-  min-height: 100%;
 }
-.hero__image .virtualScreen {
+.hero__image img.networkMesh {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 82.4%;
 }
 
 * {

@@ -1,46 +1,43 @@
+import pinkLine from "../images/pink line.svg"
 import chain from "../images/chain-9365116-7621444.svg"
 import explosion from "../images/explosion.svg"
-import manWithGlasses from "../images/man-wearing-smart-glasses-touching-virtual-screen 1.png"
-import virtualScreen from "../images/ball of mesh network.png"
-import PinkLine from "../images/pink line.svg"
-import Bulb from "../images/Bulb.png";
-import Star from "../images/star.png"
+import manLookingAtVirtualScreen from "../images/man-wearing-smart-glasses-touching-virtual-screen 1.png"
+import networkMesh from "../images/ball of mesh network.png"
 
 function Hero() {
     return <>
-        <div className="hero">
-            <img src={Star} alt="Image of a star" className={'star one'}/>
-            <img src={Star} alt="Image of a star" className={'star two'}/>
-            <img src={Star} alt="Image of a star" className={'star three'}/>
-            <div className="hero__text">
-                <h2>Igniting a Revolution in HR Innovation<img src={PinkLine} alt="Pink Line" className={"pinkLine"}/></h2>
+        <section className="hero">
 
-            </div>
-            <div className="hero__details">
-                <h2>getlinked Tech Hackathon <span>1.0</span> <img src={chain} alt="Chain Image"/> <img src={explosion}
-                                                                                                        alt="Explosion image"/>
-                    <img src={Bulb} alt="Light Bulb" className="bulb"/>
+            <section className="hero__Title">
+                <h2>Igniting a Revolution in HR Innovation</h2>
+                <img src={pinkLine} alt="" className="pinkLine"/>
+            </section>
 
+            <section className="hero__Details">
+                <h2>
+                    getlinked Tech
+                    Hackathon <span className="text--secondary">1.0</span>
+                    <span>
+                        <img src={chain} alt="Chain" className="chain"/>
+                        <img src={explosion} alt="Explosion" className='explosion'/>
+                    </span>
                 </h2>
-                <p>
-                    Participate in getlinked tech Hackathon 2023 stand
-                    a chance to win a Big prize
-                </p>
-                <button className={'button-gradient'}>Register</button>
+                <p>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
+                <button className="button-gradient">Register</button>
+                <section className="hero__Details__time">
+                    <span className="hours">00</span>H
+                    <span className="minutes">00</span>M
+                    <span className="seconds">00</span>S
+                </section>
 
-                <div className="time">
-                    <span className="hours">00</span>H &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span className="minutes">00</span>M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span className="seconds">00</span>S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </section>
 
-                </div>
-            </div>
-            <div className="hero__image">
-                <img src={manWithGlasses} alt="Man Wearing Glasses" className={'manWithGlasses'}/>
-                <img src={virtualScreen} alt="Virtual Screen" className={'virtualScreen'}/>
+            <section className="hero__image">
+                <img src={manLookingAtVirtualScreen} alt="Man Looking at virtual screen" className="man"/>
+                <img src={networkMesh} alt="Network Mesh" className="networkMesh"/>
 
-            </div>
-        </div>
+            </section>
+        </section>
     </>
 }
 
