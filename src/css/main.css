@@ -5,6 +5,10 @@
   font-family: "Clash Display", sans-serif;
 }
 
+p, span {
+  font-family: "Montserrat", sans-serif;
+}
+
 .text--primary {
   color: #D434FE !important;
 }
@@ -28,6 +32,8 @@ html {
 
 .hero {
   min-height: 50vh;
+  background: url("../images/Purple-Lens-Flare-PNG MObile.png") no-repeat center left;
+  background-size: 29rem;
   display: grid;
   grid-template-areas: "title" "details" "image";
   grid-template-columns: repeat(1, 1fr);
@@ -36,6 +42,7 @@ html {
   padding-inline: 1rem;
   padding-block-start: 1rem;
   border-bottom: 0.8px solid rgba(217, 217, 217, 0.9);
+  position: relative;
 }
 .hero > section {
   width: 100%;
@@ -49,19 +56,16 @@ html {
   align-items: center;
 }
 .hero__Title h2 {
-  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: bold;
 }
 .hero__Title .pinkLine {
   width: 115px;
   height: 7px;
   align-self: flex-end;
-  -webkit-transform: translateX(-17px);
-  -moz-transform: translateX(-17px);
-  -ms-transform: translateX(-17px);
-  -o-transform: translateX(-17px);
-  transform: translateX(-17px);
+  transform: translateX(-51%);
 }
 .hero__Details {
   grid-area: details;
@@ -69,11 +73,22 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.hero__Details .lightBulb {
+  width: 23px;
+  height: auto;
+  position: absolute;
+  top: -16px;
+  right: 26%;
+  z-index: 1;
 }
 .hero__Details h2 {
   width: 15ch;
   word-spacing: 3px;
   letter-spacing: 2px;
+  font-size: 2rem;
+  line-height: 1.6;
 }
 .hero__Details h2 span > img {
   vertical-align: middle;
@@ -92,6 +107,7 @@ html {
   line-height: 1.6;
   letter-spacing: 2px;
   margin-block: 0.7rem;
+  font-family: "Montserrat", sans-serif;
 }
 .hero__Details button {
   padding: 10px 15px;
@@ -100,6 +116,13 @@ html {
   color: white;
   min-width: 152px;
   border-radius: 4px;
+}
+.hero__Details__time {
+  font-size: 0.5rem;
+}
+.hero__Details__time span {
+  font-family: "Unica One", cursive;
+  font-size: 1.5rem;
 }
 .hero__image {
   grid-area: image;
@@ -115,12 +138,43 @@ html {
   top: 0;
   left: 0;
 }
+.hero .stars {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .stars img {
+  position: absolute;
+}
+.hero .stars .star1 {
+  top: 7%;
+  left: 17%;
+  width: 10px;
+  height: 12px;
+}
+.hero .stars .star2, .hero .stars .star3 {
+  width: 6px;
+  height: 8px;
+  opacity: 80%;
+  top: 10%;
+  right: 20%;
+}
+.hero .stars .star3 {
+  top: 35%;
+  left: 71%;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Clash Display", sans-serif;
+}
+
+p, span {
+  font-family: "Montserrat", sans-serif;
 }
 
 .text--primary {
@@ -170,6 +224,10 @@ html {
   font-family: "Clash Display", sans-serif;
 }
 
+p, span {
+  font-family: "Montserrat", sans-serif;
+}
+
 .text--primary {
   color: #D434FE !important;
 }
@@ -198,6 +256,8 @@ html {
   align-items: center;
   padding: 2rem;
   border-bottom: 0.8px solid rgba(217, 217, 217, 0.9);
+  background: url("../images/Purple-Lens-Flare-PNG MObile.png") no-repeat, url("../images/Purple-Lens-Flare-right.png") no-repeat;
+  background-position: 0px -39px, 0px -70%;
 }
 .rules .text h2, .rules .text p {
   text-align: center;
@@ -215,6 +275,10 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Clash Display", sans-serif;
+}
+
+p, span {
+  font-family: "Montserrat", sans-serif;
 }
 
 .text--primary {
@@ -245,6 +309,8 @@ html {
   align-items: center;
   padding: 2rem;
   border-bottom: 0.8px solid rgba(217, 217, 217, 0.9);
+  background: url("../images/Purple-Lens-Flare-PNG MObile.png") no-repeat, url("../images/Purple-Lens-Flare-right.png") no-repeat;
+  background-position: 0px -39px, 0px 120%;
 }
 .judging .text {
   display: flex;
@@ -277,6 +343,10 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Clash Display", sans-serif;
+}
+
+p, span {
+  font-family: "Montserrat", sans-serif;
 }
 
 .text--primary {
@@ -314,6 +384,9 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
+}
+.faq .text h2 {
+  text-align: center;
 }
 .faq .text p {
   text-align: center;
@@ -421,6 +494,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Clash Display", sans-serif;
+}
+
+p, span {
+  font-family: "Montserrat", sans-serif;
 }
 
 .text--primary {
