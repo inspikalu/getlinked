@@ -1,0 +1,50 @@
+@import "config";
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    background-color: $primary-color;
+    height: 90%;
+  }
+
+  &__container {
+    border-radius: 0.3125rem;
+    border: 1px solid #D434FE;
+    background: rgba(255, 255, 255, 0.01);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+    place-content: center;
+    position: relative;
+
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+
+
+      }
+    }
+  }
+}

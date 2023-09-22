@@ -1,0 +1,85 @@
+@import "config";
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &Policy {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & > h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p:not(&__policy > p) {
+      margin-block: 1.5rem;
+      width: 38ch;
+    }
+
+    &__policy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+
+      P {
+        line-height: 2;
+        margin-block-end: 2rem;
+      }
+
+      h3 {
+        text-align: left !important;
+        place-self: flex-start;
+        font-size: 0.8125rem;
+        word-spacing: 2px;
+        letter-spacing: 1.6px;
+        line-height: 1.75825rem;
+        font-weight: 700;
+      }
+
+      ul {
+        place-self: flex-start;
+        li {
+          list-style-image: url("/public/list terms.png");
+          text-align: left;
+          width: 24ch;
+          margin-block: 1rem;
+        }
+      }
+
+      button {
+        width: 50%;
+        padding: .86rem;
+        border-radius: 0.3125rem;
+        border: 1px solid #D434FE;
+        font: inherit;
+        color: white;
+      }
+    }
+  }
+
+  &Lock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 483px;
+      height: auto;
+    }
+  }
+}

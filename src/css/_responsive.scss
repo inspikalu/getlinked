@@ -3,3 +3,81 @@
 @include media-lg {
 
 }
+
+@include media-md {
+  .hero {
+    display: grid;
+    grid-template-areas:
+    'title title'
+  'details image';
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .intro {
+    flex-direction: row;
+    gap: 2rem;
+
+    * {
+      text-align: left !important;
+    }
+  }
+
+  .rules {
+    flex-direction: row-reverse;
+    gap: 2rem;
+
+    * {
+      text-align: left !important;
+    }
+  }
+  .judging {
+    flex-direction: row;
+
+    .text {
+      align-items: flex-start;
+
+      h2 {
+        padding-inline: 1.3rem;
+      }
+    }
+
+    * {
+      text-align: left !important;
+    }
+  }
+
+  .faq {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      width: 50%;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .prizes {
+    grid-template-columns: repeat(2, 1fr);
+
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      p {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+@include media-sm {
+
+}
