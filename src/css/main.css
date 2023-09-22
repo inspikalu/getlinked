@@ -931,6 +931,15 @@ html {
     grid-template-areas: "title title" "details image";
     grid-template-columns: repeat(2, 1fr);
   }
+  *:not(.hero__Title) {
+    text-align: left !important;
+  }
+  .hero__Title {
+    align-items: flex-end;
+  }
+  .hero__Title h2 {
+    text-align: right !important;
+  }
   .intro {
     flex-direction: row;
     gap: 2rem;
@@ -981,6 +990,37 @@ html {
   }
   .prizes__text p {
     margin: 10px;
+  }
+  .partners__container {
+    width: 70%;
+  }
+  .privacy {
+    flex-direction: row;
+    padding-inline: 3rem;
+  }
+  .privacy * {
+    text-align: left;
+  }
+  .privacyPolicy {
+    align-items: flex-start;
+    width: 50%;
+  }
+  .privacyPolicy h2 {
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .privacyLock {
+    width: 60%;
+  }
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer > section:not(.footer__rights) {
+    width: 33.33%;
+  }
+  .footer__rights {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
 

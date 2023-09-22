@@ -11,6 +11,18 @@
     'title title'
   'details image';
     grid-template-columns: repeat(2, 1fr);
+
+    *:not(&__Title) {
+      text-align: left !important;
+    }
+
+    &__Title {
+      align-items: flex-end;
+
+      h2 {
+        text-align: right !important;
+      }
+    }
   }
   .intro {
     flex-direction: row;
@@ -74,6 +86,49 @@
       p {
         margin: 10px;
       }
+    }
+  }
+
+  .partners {
+    &__container {
+      width: 70%;
+    }
+  }
+
+  .privacy {
+    flex-direction: row;
+    padding-inline: 3rem;
+
+    * {
+      text-align: left;
+    }
+
+    &Policy {
+      align-items: flex-start;
+
+      h2 {
+        align-items: flex-start;
+        margin-bottom: 10px;
+      }
+
+      width: 50%;
+    }
+
+    &Lock {
+      width: 60%;
+    }
+  }
+
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+
+    & > section:not(&__rights) {
+      width: 33.33%;
+    }
+
+    &__rights {
+      grid-column-start: 1;
+      grid-column-end: 4;
     }
   }
 }
